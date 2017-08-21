@@ -16,6 +16,10 @@
   justify-content: center;
 }
 
+.logoContainer > img{
+  width: 20%;
+}
+
 .containerInputAccessCode{
   display: flex;
   align-items: center;
@@ -24,7 +28,7 @@
 }
 
 .containerInputAccessCode > div{
-  width: 50%;
+  width: 30%;
   text-align: center;
 }
 
@@ -49,12 +53,19 @@
 
 
 .buttonLogin{
-  padding: 0 !important;
-  font-size: 1.5rem !important;
-  margin-top: 40px !important;
-  width: 130px;
-  height: 65px;
+  background-color: #ff9A00;
+  color: #fff;
+  font-family: Roboto_Bold;
+  margin-top: 50px !important;
   position: relative;
+  font-size: 1.5rem !important;
+  width: 150px;
+  height: 65px;
+}
+
+.buttonLogin:active, .buttonLogin:hover{
+  border-color: #a2a2a2;
+  background-color: #ed9002 !important;
 }
 
 .buttonLogin::before, .buttonLogin::after{

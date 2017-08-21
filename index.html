@@ -7,26 +7,23 @@
 
     <title>Dashboard</title>
 
+    <!-- Bootstrap Framework Styles v4 -->
+    <link rel="stylesheet" href="bower_components/bootstrap/dist/css/bootstrap.css">
 
     <link rel="stylesheet" href="css/style.css">
     <link rel="stylesheet" href="templates/login/login.css">
+    <link rel="stylesheet" href="templates/info/info.css">
 
   </head>
-  <body>
-    <div class="loginContainer">
-      <div class="logoContainer">
-        <img src="img/whitelogolarge.png" alt="Innovation">
-      </div>
-      <div class="containerInputAccessCode">
-        <div class="">
-          <input class="inputAccessCode" type="text" placeholder="Código de acceso">
-          <button type="button" class="buttonLogin">Ingresar</button>
-        </div>
+  <body ng-app="cmi">
+    <div class="container-fluid" ui-view></div>
 
-      </div>
-    </div>
+    <!-- Angular Framework -->
+    <script src="bower_components/angular/angular.js"></script>
+    <!-- Router AngularUI -->
+    <script src="bower_components/angular-ui-router/release/angular-ui-router.js"></script>
 
-
-
+    <!-- Routes -->
+    <script src="js/route.js"></script>
   </body>
 </html>

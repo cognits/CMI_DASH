@@ -10,9 +10,20 @@ var config = {
 var CMIFirebase = firebase.initializeApp(config);
 
 cmi.controller("mainCtrl", function($scope, getResumen){
-  console.log("Main Controller");
-  $scope.resumenData = getResumen;
-  $scope.resumenData.$loaded().then(function () {
-    console.log($scope.resumenData);
-  })
+  $scope.resumenData = getResumen
+});
+
+cmi.controller("loginCtrl", function($scope, $state){
+  $scope.verifyLogin = function functionName(pass) {
+    console.log(pass);
+    if (pass == "cmidash17") {
+      $state.go("info");
+    } else {
+      swal(
+        'Oops...',
+        'La contraseña es incorrecta, contacta a tu administrador.',
+        'error'
+      )
+    }
+  };
 })

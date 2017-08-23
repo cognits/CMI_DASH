@@ -4,9 +4,9 @@
   </div>
   <div class="containerInputAccessCode">
     <div class="">
-      <input class="inputAccessCode" type="text" placeholder="Código de acceso">
-      <button type="button" class="buttonLogin button button-energized" ui-sref="info">Ingresar</button>
-    </div> 
+      <input class="inputAccessCode" type="password" placeholder="Código de acceso" ng-model="password">
+      <button type="button" class="buttonLogin button button-energized" ng-click="verifyLogin(password)">Ingresar</button>
+    </div>
 
   </div>
 </div

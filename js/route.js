@@ -10,6 +10,7 @@ cmi.config(function($stateProvider, $urlRouterProvider) {
       views: {
         '': {
           templateUrl: "templates/login/login.html",
+          controller: "loginCtrl"
         }
       }
     })

@@ -1,4 +1,4 @@
-var cmi = angular.module('cmi', ['ui.router']);
+var cmi = angular.module('cmi', ['ui.router','firebase']);
 
 cmi.config(function($stateProvider, $urlRouterProvider) {
 
@@ -19,6 +19,7 @@ cmi.config(function($stateProvider, $urlRouterProvider) {
       views: {
         '': {
           templateUrl: "templates/info/info.html",
+          controller: "mainCtrl"
         }
       }
     })

@@ -11,11 +11,13 @@ var CMIFirebase = firebase.initializeApp(config);
 
 cmi.controller("mainCtrl", function($scope, getResumen){
   $scope.resumenData = getResumen
+  $scope.resumenData.$loaded().then(function () {
+    console.log($scope.resumenData);
+  });
 });
 
 cmi.controller("loginCtrl", function($scope, $state){
   $scope.verifyLogin = function functionName(pass) {
-    console.log(pass);
     if (pass == "cmidash17") {
       $state.go("info");
     } else {
